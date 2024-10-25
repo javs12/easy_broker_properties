@@ -3,6 +3,13 @@ require 'easy_broker'
 require 'ostruct'
 
 class PropertyService
+
+  def print_list
+    print 'there are no properties' if title_list.empty?
+
+    puts title_list
+  end
+
   def title_list
     results = search_properties(limit: 50, page: 1)
 
